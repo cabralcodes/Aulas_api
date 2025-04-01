@@ -1,0 +1,6 @@
+<?php
+
+//user: user_loja_api
+// password:x(v5id[4E@hThMNg
+
+?>
