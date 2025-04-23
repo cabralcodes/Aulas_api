@@ -54,14 +54,8 @@ public function add_do_data($key, $value)
     public function api_request_error($message = ' ')
     {
         //output api error message
-
-        $data_error = [
-            'satus' => 'ERROR',
-            'message' =>$message,
-            'results'=> null
-    ];
-        
-        $this -> data['data'] = $data_error;
+        $this -> data['status'] = 'ERROR';
+        $this -> data['error_message'] = $message;
         $this -> send_response();
     }
     //=============================

@@ -21,29 +21,32 @@ class api_logic
         return method_exists($this, $this->endpoint); 
     }
     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
     //------------------------------------
     //ENDPOINTS
     //------------------------------------
     public function status()
     {
-        return ['satus => SUCCESS',
-                'message' => 'API is runnig OK!',
-                'results' => null
-        ];
-        
+        return ['satus => SUCCESS'];
     }
 
     public function get_all_clients()
     {
-        //query to the database
-
-        return [
-            'status' => 'SUCCESS',
-            'message'=> '',
-            'results' => [
-                'joao', 'ana','pedro','antonio'
-            ]
-        ];
+        
     }
 
     public function get_all_products()

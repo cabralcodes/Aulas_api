@@ -32,6 +32,8 @@ elseif($api_response->get_method()=='POST') {
 }
 
 
+$api_response -> send_api_status();
+
 //-----------------------------------------
 //prepare the api logic
 $api_logic = new api_logic($api_response-> get_endpoint(), $params);
@@ -44,6 +46,6 @@ if(!$api_logic->endpoint_exists())
 }
 
 //request to the api_logic
-$results = $api_logic->{$api_response->get_endpoint()}();
+$results = $api_logic->{$api_response->get_endpoint()};
 $api_response->add_do_data('data', $results);
 $api_response-> send_response();

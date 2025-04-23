@@ -47,5 +47,4 @@ function response($data_response){
  echo json_encode ($data_response);
 
 }
-
 ?>
