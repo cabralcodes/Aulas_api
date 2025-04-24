@@ -32,28 +32,34 @@ class api_logic
         ];
         
     }
+//------------------------------------
 
     public function get_all_clients()
     {
-        //query to the database
+        //returns all clients for our database
 
+        $db = new database();
+        $results = $db->EXE_QUERY("SELECT * FROM cliente ");
+        
         return [
             'status' => 'SUCCESS',
             'message'=> '',
-            'results' => [
-                'joao', 'ana','pedro','antonio'
-            ]
+            'results' => $results
         ];
     }
+//------------------------------------
 
     public function get_all_products()
     {
+        //return all products in the database
+        $db = new database();
+        $results = $db->EXE_QUERY("SELECT * FROM produto ");
+        
         return [
             'status' => 'SUCCESS',
             'message'=> '',
-            'results' => [
-                'laranja', 'ananas','martelo','parafuso'
-            ]
+            'results' => $results,
+                
         ];
     }
 }
